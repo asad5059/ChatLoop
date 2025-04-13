@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'chatapp'
 ]
 
 MIDDLEWARE = [
@@ -68,7 +71,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ChatLoop.wsgi.application'
+# WSGI_APPLICATION = 'ChatLoop.wsgi.application'
+ASGI_APPLICATION = 'ChatLoop.asgi.application'
 
 
 # Database
