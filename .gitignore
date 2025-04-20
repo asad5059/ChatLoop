@@ -1,1 +1,2 @@
 frontend/ChatApp/package-lock.json
+*.sqlite3
