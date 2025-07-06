@@ -1,0 +1,89 @@
+@import "../../variables.scss";
+
+.chatroom-container {
+  background: $background-color;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+  max-width: 600px;
+  height: 70vh;
+  margin: auto;
+}
+
+.chat-header {
+  color: $primary-color;
+  font-size: $font-lg;
+  font-weight: 700;
+  margin-bottom: $spacing-md;
+  text-align: center;
+}
+
+.messages-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  font-size: $font-md;
+  margin-bottom: $spacing-xs;
+  word-break: break-word;
+  &.user {
+    background: $chat-bubble-user;
+    color: $chat-bubble-user-text;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+  }
+  &.other {
+    background: $chat-bubble-other;
+    color: $chat-bubble-other-text;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.input-row {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.message-input {
+  flex: 1;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $input-border;
+  border-radius: $radius;
+  background: $input-bg;
+  font-size: $font-md;
+  color: $text-color;
+  transition: border 0.2s;
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+}
+
+.send-button {
+  padding: $spacing-sm $spacing-md;
+  background: $primary-color;
+  color: $chat-bubble-user-text;
+  border: none;
+  border-radius: $radius;
+  font-size: $font-md;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: $shadow;
+  transition: background 0.2s;
+  &:hover {
+    background: $accent-color;
+  }
+} 
