@@ -9,7 +9,7 @@ import "./App.scss";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [chatName, setChatName] = useState(localStorage.getItem('chatName') || '');
-  const [messages, sendMessage, connectionState] = useWebSocket();
+  const [messages, sendMessage, connectionState] = useWebSocket(chatName);
 
   const handleLogin = (name) => {
     setChatName(name);
